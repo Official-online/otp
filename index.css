@@ -1,0 +1,137 @@
+*{box-sizing: border-box}
+body{
+    width: 100%;
+    padding: 5%;
+    margin-top: 4%;
+}
+h2, #p1{
+    font-size: 250%;
+    margin-top: -4%;
+}
+#div1{
+    font-size: 150%;
+    margin-top:4%;
+}
+#p2{
+    margin-top: -3%;
+    font-size: 120%;
+}
+#contact-form{
+    color: #aaa;
+    width:100%;
+    margin-top: 15%;
+    padding: 5%;
+    /* padding-left: 5%; */
+    background-color: #eee;
+    border-radius: 30px;
+}
+input{
+    text-align: center;
+    background-color: white;
+    color: #ccc;
+    width: 100%;
+    font-size: 450%;
+    padding: 5%;
+    margin-bottom: 10%;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+}
+#otp{
+    color: black;
+}
+label{
+    font-size: 450%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        /* margin-top: 15%; */
+}
+
+#submit{
+    background-color: green;
+    margin-top: 5%;
+    position: relative;
+    /* animation-name: done; */
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-direction:normal;
+    animation-timing-function: ease-in-out;
+}
+@keyframes done{
+    0%{
+        width: 50%;
+        color: rgb(255, 239, 93);
+        background-color: rgb(255, 239, 93);
+        left: 0%;
+        top: 0%;
+    }
+    25%{
+        color: red;
+        width: 15%;
+        background-color: red;
+        left: 80%; 
+        top: 0%;
+    }
+    50%{
+        color: orangered;
+        background-color: orangered;
+        width: 20%;
+        left: 80%;
+    }
+    75%{
+        color: orange;
+        background-color: orange;
+        width: 20%;
+        left: 0%;  
+    }
+    100%{
+        color: red;
+        width: 50%;
+        background-color: red;
+        left: 0%; 
+        top: 0%;
+    }
+
+}
+@keyframes failed{
+    0%{
+        width: 50%;
+        color: rgb(255, 239, 93);
+        background-color: rgb(255, 239, 93);
+        left: 0%;
+        top: 0%;
+    }
+    25%{
+        color: red;
+        width: 15%;
+        background-color: red;
+        left: 0%; 
+        top: 0%;
+    }
+    50%{
+        color: orangered;
+        background-color: orangered;
+        width: 20%;
+        left: 80%;
+        /* top:10%; */
+    }
+    75%{
+        color: orange;
+        background-color: orange;
+        width: 20%;
+        left: 80%;
+        /* top: 35%; */
+    }
+    100%{
+        color: red;
+        width: 50%;
+        background-color: red;
+        left: 0%; 
+        top: 0%;
+    }
+
+}
+#submit:hover{
+    color: green;
+    background-color: #ccc;
+    /* background-color: rgb(64, 248, 8); */
+}

