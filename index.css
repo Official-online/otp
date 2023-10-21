@@ -22,7 +22,7 @@ h2, #p1{
     margin-top: 5%;
     padding: 5%;
     /* padding-left: 5%; */
-    background-color: #eee;
+    background-color: rgb(188, 216, 223);
     border-radius: 30px;
 }
 input{
